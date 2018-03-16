@@ -4,25 +4,15 @@
 #
 Name     : R-rsconnect
 Version  : 0.8.8
-Release  : 1
+Release  : 2
 URL      : https://cran.r-project.org/src/contrib/rsconnect_0.8.8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsconnect_0.8.8.tar.gz
 Summary  : Deployment Interface for R Markdown Documents and Shiny
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-PKI
-Requires: R-RCurl
-Requires: R-RJSONIO
-Requires: R-keras
-Requires: R-packrat
-Requires: R-rmarkdown
-Requires: R-rstudioapi
-Requires: R-shiny
-Requires: R-yaml
 BuildRequires : R-PKI
 BuildRequires : R-RCurl
 BuildRequires : R-RJSONIO
-BuildRequires : R-keras
 BuildRequires : R-packrat
 BuildRequires : R-rmarkdown
 BuildRequires : R-rstudioapi
@@ -42,11 +32,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521242623
+export SOURCE_DATE_EPOCH=1521243196
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521242623
+export SOURCE_DATE_EPOCH=1521243196
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
