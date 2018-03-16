@@ -4,3 +4,7 @@ R-rmarkdown
 R-shiny
 R-RCurl
 R-RJSONIO
+R-packrat
+R-rstudioapi
+R-PKI
+R-yaml
