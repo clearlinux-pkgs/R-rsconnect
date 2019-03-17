@@ -4,16 +4,17 @@
 #
 Name     : R-rsconnect
 Version  : 0.8.13
-Release  : 19
+Release  : 20
 URL      : https://cran.r-project.org/src/contrib/rsconnect_0.8.13.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsconnect_0.8.13.tar.gz
 Summary  : Deployment Interface for R Markdown Documents and Shiny
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-openssl
+Requires: R-jsonlite
 BuildRequires : R-PKI
 BuildRequires : R-RCurl
 BuildRequires : R-RJSONIO
+BuildRequires : R-jsonlite
 BuildRequires : R-openssl
 BuildRequires : R-packrat
 BuildRequires : R-rmarkdown
@@ -37,10 +38,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1547174466
+export SOURCE_DATE_EPOCH=1552862261
 
 %install
-export SOURCE_DATE_EPOCH=1547174466
+export SOURCE_DATE_EPOCH=1552862261
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -76,8 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library rsconnect|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  rsconnect || :
 
 
 %files
@@ -108,3 +108,44 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/rsconnect/html/00Index.html
 /usr/lib64/R/library/rsconnect/html/R.css
 /usr/lib64/R/library/rsconnect/resources/environment.py
+/usr/lib64/R/library/rsconnect/tests/testthat.R
+/usr/lib64/R/library/rsconnect/tests/testthat/certs/invalid.crt
+/usr/lib64/R/library/rsconnect/tests/testthat/certs/localhost.crt
+/usr/lib64/R/library/rsconnect/tests/testthat/certs/sample.crt
+/usr/lib64/R/library/rsconnect/tests/testthat/certs/store.crt
+/usr/lib64/R/library/rsconnect/tests/testthat/certs/two-cas.crt
+/usr/lib64/R/library/rsconnect/tests/testthat/helper.R
+/usr/lib64/R/library/rsconnect/tests/testthat/project-MASS/MASS.R
+/usr/lib64/R/library/rsconnect/tests/testthat/shiny-app-in-subdir/my-app/server.R
+/usr/lib64/R/library/rsconnect/tests/testthat/shiny-app-in-subdir/my-app/ui.r
+/usr/lib64/R/library/rsconnect/tests/testthat/shiny-rmds/non-shiny-rmd.Rmd
+/usr/lib64/R/library/rsconnect/tests/testthat/shiny-rmds/shiny-rmd-dashes.Rmd
+/usr/lib64/R/library/rsconnect/tests/testthat/shiny-rmds/shiny-rmd-dots.Rmd
+/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-appR/app.R
+/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-simple/server.R
+/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-simple/ui.R
+/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-singleR/single.R
+/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/College.txt
+/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/ShinyDocument.Rmd
+/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/ShinyPresentation.Rmd
+/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/server.R
+/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/subdir/Genetics.txt
+/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/ui.R
+/usr/lib64/R/library/rsconnect/tests/testthat/test-bundle.R
+/usr/lib64/R/library/rsconnect/tests/testthat/test-cert.R
+/usr/lib64/R/library/rsconnect/tests/testthat/test-connect.R
+/usr/lib64/R/library/rsconnect/tests/testthat/test-detection.R
+/usr/lib64/R/library/rsconnect/tests/testthat/test-http.R
+/usr/lib64/R/library/rsconnect/tests/testthat/test-lint.R
+/usr/lib64/R/library/rsconnect/tests/testthat/test-plumber/plumber.R
+/usr/lib64/R/library/rsconnect/tests/testthat/test-reticulate-rmds/implicit.Rmd
+/usr/lib64/R/library/rsconnect/tests/testthat/test-reticulate-rmds/index.Rmd
+/usr/lib64/R/library/rsconnect/tests/testthat/test-rmds/index.Rmd
+/usr/lib64/R/library/rsconnect/tests/testthat/test-rmds/parameterized.Rmd
+/usr/lib64/R/library/rsconnect/tests/testthat/test-rmds/simple.Rmd
+/usr/lib64/R/library/rsconnect/tests/testthat/test-shinyApp/test-shinyApp.tar.gz
+/usr/lib64/R/library/rsconnect/tests/testthat/test-title.R
+/usr/lib64/R/library/rsconnect/tests/testthat/test-utils.R
+/usr/lib64/R/library/rsconnect/tests/testthat/tf-human-readable-saved-model/1/saved_model.pbtxt
+/usr/lib64/R/library/rsconnect/tests/testthat/tf-saved-model-rootdir/saved_model.pb
+/usr/lib64/R/library/rsconnect/tests/testthat/tf-saved-model/1/saved_model.pb
