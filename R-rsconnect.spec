@@ -4,7 +4,7 @@
 #
 Name     : R-rsconnect
 Version  : 0.8.15
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/rsconnect_0.8.15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsconnect_0.8.15.tar.gz
 Summary  : Deployment Interface for R Markdown Documents and Shiny
@@ -14,9 +14,7 @@ Requires: R-curl
 Requires: R-jsonlite
 Requires: R-openssl
 Requires: R-packrat
-Requires: R-rmarkdown
 Requires: R-rstudioapi
-Requires: R-shiny
 Requires: R-yaml
 BuildRequires : R-curl
 BuildRequires : R-jsonlite
@@ -27,10 +25,14 @@ BuildRequires : R-rstudioapi
 BuildRequires : R-shiny
 BuildRequires : R-yaml
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
-'RStudio Connect'. Supported content types include R Markdown documents,
-    Shiny applications, Plumber APIs, plots, and static web content.
+rsconnect
+=======================================================
+[![CRAN status](https://www.r-pkg.org/badges/version/rsconnect)](https://cran.r-project.org/package=rsconnect)
+[![Build Status](https://travis-ci.org/rstudio/rsconnect.svg?branch=master)](https://travis-ci.org/rstudio/rsconnect)
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 
 %prep
 %setup -q -c -n rsconnect
@@ -40,10 +42,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563897055
+export SOURCE_DATE_EPOCH=1571897744
 
 %install
-export SOURCE_DATE_EPOCH=1563897055
+export SOURCE_DATE_EPOCH=1571897744
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
