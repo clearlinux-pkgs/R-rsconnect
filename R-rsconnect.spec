@@ -4,7 +4,7 @@
 #
 Name     : R-rsconnect
 Version  : 0.8.16
-Release  : 34
+Release  : 35
 URL      : https://cran.r-project.org/src/contrib/rsconnect_0.8.16.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsconnect_0.8.16.tar.gz
 Summary  : Deployment Interface for R Markdown Documents and Shiny
@@ -15,41 +15,39 @@ Requires: R-digest
 Requires: R-jsonlite
 Requires: R-openssl
 Requires: R-packrat
-Requires: R-rmarkdown
 Requires: R-rstudioapi
-Requires: R-shiny
 Requires: R-yaml
 BuildRequires : R-curl
 BuildRequires : R-digest
 BuildRequires : R-jsonlite
 BuildRequires : R-openssl
 BuildRequires : R-packrat
-BuildRequires : R-rmarkdown
 BuildRequires : R-rstudioapi
-BuildRequires : R-shiny
 BuildRequires : R-yaml
 BuildRequires : buildreq-R
 
 %description
-# rsconnect <a href='https:/rstudio.github.io/rstudioapi'><img src='man/figures/logo.png' align="right" height="139" /></a>
+'RStudio Connect'. Supported content types include R Markdown documents,
+    Shiny applications, Plumber APIs, plots, and static web content.
 
 %prep
 %setup -q -c -n rsconnect
+cd %{_builddir}/rsconnect
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576533881
+export SOURCE_DATE_EPOCH=1589770398
 
 %install
-export SOURCE_DATE_EPOCH=1576533881
+export SOURCE_DATE_EPOCH=1589770398
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
