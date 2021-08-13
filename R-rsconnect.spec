@@ -4,7 +4,7 @@
 #
 Name     : R-rsconnect
 Version  : 0.8.24
-Release  : 46
+Release  : 47
 URL      : https://cran.r-project.org/src/contrib/rsconnect_0.8.24.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsconnect_0.8.24.tar.gz
 Summary  : Deployment Interface for R Markdown Documents and Shiny
