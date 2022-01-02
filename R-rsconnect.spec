@@ -4,7 +4,7 @@
 #
 Name     : R-rsconnect
 Version  : 0.8.25
-Release  : 51
+Release  : 52
 URL      : https://cran.r-project.org/src/contrib/rsconnect_0.8.25.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsconnect_0.8.25.tar.gz
 Summary  : Deployment Interface for R Markdown Documents and Shiny
@@ -39,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1637337803
+export SOURCE_DATE_EPOCH=1641105982
 
 %install
-export SOURCE_DATE_EPOCH=1637337803
+export SOURCE_DATE_EPOCH=1641105982
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
