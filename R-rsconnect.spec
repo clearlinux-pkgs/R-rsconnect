@@ -4,7 +4,7 @@
 #
 Name     : R-rsconnect
 Version  : 0.8.29
-Release  : 62
+Release  : 63
 URL      : https://cran.r-project.org/src/contrib/rsconnect_0.8.29.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsconnect_0.8.29.tar.gz
 Summary  : Deployment Interface for R Markdown Documents and Shiny
@@ -25,9 +25,6 @@ BuildRequires : R-packrat
 BuildRequires : R-rstudioapi
 BuildRequires : R-yaml
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 'Posit Connect'. Supported content types include R Markdown documents,
@@ -42,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1673371637
+export SOURCE_DATE_EPOCH=1678834863
 
 %install
-export SOURCE_DATE_EPOCH=1673371637
+export SOURCE_DATE_EPOCH=1678834863
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
