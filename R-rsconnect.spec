@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-rsconnect
-Version  : 1.0.0
-Release  : 67
-URL      : https://cran.r-project.org/src/contrib/rsconnect_1.0.0.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/rsconnect_1.0.0.tar.gz
+Version  : 1.0.1
+Release  : 68
+URL      : https://cran.r-project.org/src/contrib/rsconnect_1.0.1.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/rsconnect_1.0.1.tar.gz
 Summary  : Deploy Docs, Apps, and APIs to 'Posit Connect', 'shinyapps.io',
 Group    : Development/Tools
 License  : GPL-2.0
@@ -52,10 +52,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689784684
+export SOURCE_DATE_EPOCH=1689890090
 
 %install
-export SOURCE_DATE_EPOCH=1689784684
+export SOURCE_DATE_EPOCH=1689890090
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
