@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-rsconnect
-Version  : 1.0.1
-Release  : 68
-URL      : https://cran.r-project.org/src/contrib/rsconnect_1.0.1.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/rsconnect_1.0.1.tar.gz
+Version  : 1.0.2
+Release  : 69
+URL      : https://cran.r-project.org/src/contrib/rsconnect_1.0.2.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/rsconnect_1.0.2.tar.gz
 Summary  : Deploy Docs, Apps, and APIs to 'Posit Connect', 'shinyapps.io',
 Group    : Development/Tools
 License  : GPL-2.0
@@ -52,10 +52,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689890090
+export SOURCE_DATE_EPOCH=1692306722
 
 %install
-export SOURCE_DATE_EPOCH=1689890090
+export SOURCE_DATE_EPOCH=1692306722
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -140,6 +140,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/rsconnect/html/00Index.html
 /usr/lib64/R/library/rsconnect/html/R.css
 /usr/lib64/R/library/rsconnect/resources/environment.py
+/usr/lib64/R/library/rsconnect/tests/manual/appMode.Rmd
 /usr/lib64/R/library/rsconnect/tests/manual/dependencies.Rmd
 /usr/lib64/R/library/rsconnect/tests/manual/deploySite.Rmd
 /usr/lib64/R/library/rsconnect/tests/manual/publishing-dialog.Rmd
@@ -154,6 +155,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/rsconnect/tests/testthat/_snaps/bundleFiles.md
 /usr/lib64/R/library/rsconnect/tests/testthat/_snaps/bundlePackage.md
 /usr/lib64/R/library/rsconnect/tests/testthat/_snaps/bundlePackagePackrat.md
+/usr/lib64/R/library/rsconnect/tests/testthat/_snaps/bundlePackageRenv.md
 /usr/lib64/R/library/rsconnect/tests/testthat/_snaps/bundlePython.md
 /usr/lib64/R/library/rsconnect/tests/testthat/_snaps/cookies.md
 /usr/lib64/R/library/rsconnect/tests/testthat/_snaps/deployApp.md
@@ -214,7 +216,6 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/ShinyPresentation.Rmd
 /usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/data/College.txt
 /usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/server.R
-/usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/subdir/Genetics.txt
 /usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-absolute-paths/ui.R
 /usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-browser/server.R
 /usr/lib64/R/library/rsconnect/tests/testthat/shinyapp-with-browser/ui.R
@@ -250,7 +251,6 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/rsconnect/tests/testthat/test-http-rcurl.R
 /usr/lib64/R/library/rsconnect/tests/testthat/test-http.R
 /usr/lib64/R/library/rsconnect/tests/testthat/test-ide.R
-/usr/lib64/R/library/rsconnect/tests/testthat/test-lint-framework.R
 /usr/lib64/R/library/rsconnect/tests/testthat/test-lint.R
 /usr/lib64/R/library/rsconnect/tests/testthat/test-linters.R
 /usr/lib64/R/library/rsconnect/tests/testthat/test-locale.R
