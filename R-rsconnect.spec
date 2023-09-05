@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-rsconnect
-Version  : 1.0.2
-Release  : 69
-URL      : https://cran.r-project.org/src/contrib/rsconnect_1.0.2.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/rsconnect_1.0.2.tar.gz
+Version  : 1.1.0
+Release  : 70
+URL      : https://cran.r-project.org/src/contrib/rsconnect_1.1.0.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/rsconnect_1.1.0.tar.gz
 Summary  : Deploy Docs, Apps, and APIs to 'Posit Connect', 'shinyapps.io',
 Group    : Development/Tools
 License  : GPL-2.0
@@ -52,10 +52,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1692306722
+export SOURCE_DATE_EPOCH=1693937468
 
 %install
-export SOURCE_DATE_EPOCH=1692306722
+export SOURCE_DATE_EPOCH=1693937468
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -181,6 +181,18 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/rsconnect/tests/testthat/helper-paths.R
 /usr/lib64/R/library/rsconnect/tests/testthat/helper.R
 /usr/lib64/R/library/rsconnect/tests/testthat/multibyte-characters/app.R
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/latin1package/DESCRIPTION
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/latin1package/NAMESPACE
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/latin1package/R/hello.R
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/latin1package/man/hello.Rd
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/utf8package/DESCRIPTION
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/utf8package/NAMESPACE
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/utf8package/R/hello.R
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/utf8package/man/hello.Rd
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/windows1251package/DESCRIPTION
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/windows1251package/NAMESPACE
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/windows1251package/R/hello.R
+/usr/lib64/R/library/rsconnect/tests/testthat/packages/windows1251package/man/hello.Rd
 /usr/lib64/R/library/rsconnect/tests/testthat/project-MASS/MASS.R
 /usr/lib64/R/library/rsconnect/tests/testthat/quarto-doc-none/quarto-doc-none.qmd
 /usr/lib64/R/library/rsconnect/tests/testthat/quarto-proj-r-shiny/_quarto.yml
