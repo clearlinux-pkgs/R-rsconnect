@@ -7,7 +7,7 @@
 #
 Name     : R-rsconnect
 Version  : 1.2.2
-Release  : 75
+Release  : 76
 URL      : https://cran.r-project.org/src/contrib/rsconnect_1.2.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rsconnect_1.2.2.tar.gz
 Summary  : Deploy Docs, Apps, and APIs to 'Posit Connect', 'shinyapps.io',
